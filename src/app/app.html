@@ -6,7 +6,7 @@
     </div>
     <div class="bg-success p-2 text-right text-white">
       <h3>Welcome to Angular</h3>
-      <p>Hello, nice to meet you</p>
+      <p>Hello {{name}}, nice to meet you</p>
     </div>
   </div>
 </div>
@@ -14,7 +14,51 @@
 <!-- Step 2 Component -->
  <div class="container mt-4">
   <h3>Step 2 Component</h3>
-  <div class="d-flex gap-5 " >
-
+  <div class="d-flex gap-5 text-nowrap">
+    <app-step2-person-table></app-step2-person-table>
+    <app-step2-person-table></app-step2-person-table>
+    <app-step2-person-table></app-step2-person-table>
   </div>
  </div>
+ 
+<!-- Step 3 Component -->
+ <div class="container mt-4">
+  <h3>Step 3 Component</h3>
+  <div class="d-flex gap-4 text-nowrap">
+    <app-step3-person-table-input [person]="personA"></app-step3-person-table-input>
+    <app-step3-person-table-input></app-step3-person-table-input>
+    <app-step3-person-table-input [person]="personB"></app-step3-person-table-input>
+  </div>
+ </div>
+
+ <!-- Step 4 Component -->
+
+ <div class="container">
+  <h3>Step 4 Component</h3>
+  <app-step4-for-directive></app-step4-for-directive>
+ </div>
+
+ <!-- Step 5 Component -->
+  <div class="container">
+    <h1>Step 5 Component</h1>
+    <app-step5-event-bind></app-step5-event-bind>
+  </div>
+
+  <!-- Step 6 Routing -->
+  <div class="container mt-2">
+    <div class="d-flex flex-column gap-2">
+      <nav class="navbar navbar-dark bg-primary justify-content-between">
+        <a class="navbar-brand ms-3 cursor-pointer" role="button">CF - Angular Introduction</a>
+      </nav>
+      <div class="d-flex flex-row gap-2">
+        <div class="d-flex flex-column text-nowrap bg-light p-2">
+          <span role="button" routerLink="person-table-example">Step 2 Person Table</span>
+          <span role="button" routerLink="component-input-example">Step 3 Person Table</span>
+        </div>
+        <span class="flex-grow-1 p-2 text-nowrap">
+          <router-outlet></router-outlet>
+        </span>
+      </div>
+    </div>
+  </div>
+  <a href=""></a>
