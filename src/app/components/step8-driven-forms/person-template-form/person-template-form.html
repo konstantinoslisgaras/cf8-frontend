@@ -1,0 +1,53 @@
+<div class="d-flex flex-column">
+  <h5>New User Form</h5>
+  <form #eForm="ngForm" class="d-flex flex-column">
+    <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input 
+        matInput
+        ngModel
+        required
+        type="text"
+        name="firstname"
+        #firstname="ngModel"
+        >
+        <mat-error>First Name is required.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input 
+        matInput
+        ngModel
+        required
+        type="text"
+        name="firstname"
+        #lastname="ngModel"
+        >
+        <mat-error>Last Name is required.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input 
+        matInput
+        ngModel
+        required
+        type="text"
+        name="email"
+        #lastname="ngModel"
+        >
+        <mat-error>Email is required.</mat-error>      
+    </mat-form-field>
+  </form>
+  <button
+    mat-flat-button
+    color="primary"
+    [disabled]="eForm.invalid"
+    (click)="onSubmit(eForm.value)"
+  >Submit
+  </button>
+  <button
+    (click)="onSetValue()"
+  >
+
+  </button>
+</div>

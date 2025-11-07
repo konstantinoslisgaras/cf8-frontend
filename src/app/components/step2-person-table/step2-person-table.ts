@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class Step2PersonTable {
   user = {
-    firstname: 'Konstantinos',
-    lastname: 'L',
-    email: 'konstantinoslisgaras@gmail.com'
+    firstname: 'Bob',
+    lastname: 'Dylan',
+    email:'bob.dylan@aueb.gr'  
   }
 }

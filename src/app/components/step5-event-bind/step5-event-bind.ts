@@ -7,23 +7,23 @@ import { Component } from '@angular/core';
   styleUrl: './step5-event-bind.css',
 })
 export class Step5EventBind {
-  times: number = 0;
-  userInput: string = "";
+  times:number = 0;
+  userInput: string = '';
 
   incrementTimes() {
     this.times++;
   }
 
-  decrementTimes() {
+  decrementTimes(){
     this.times--;
   }
 
-  reset() {
-    this.times = 0;
+  resetTimes() {
+    this.times = 0
   }
 
-  onUserInput(dataInput: Event) {
-    console.log(dataInput);
+  onUserInput(dataInput: Event){
+    console.log(">>>", dataInput);
     this.userInput = (<HTMLInputElement>dataInput.target).value;
   }
 }

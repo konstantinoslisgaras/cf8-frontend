@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Person } from '../../shared/interfaces/person';
 
 @Component({
@@ -9,10 +9,4 @@ import { Person } from '../../shared/interfaces/person';
 })
 export class Step3PersonTableInput {
   @Input() person: Person | undefined;
-
-  user = {
-    firstname: "Kappa",
-    lastname: "Lambda",
-    email: "konstantinoslisgaras@gmail.com"  
-  }
 }

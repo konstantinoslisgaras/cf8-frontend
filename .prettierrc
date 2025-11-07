@@ -1,7 +1,7 @@
 {
-  "overrides": [
+  "overrides" : [
     {
-      "files": "*.html",
+      "files":"*.html",
       "options":{
         "parser":"angular"
       }
